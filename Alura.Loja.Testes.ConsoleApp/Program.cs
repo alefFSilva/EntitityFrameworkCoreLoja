@@ -38,7 +38,7 @@ namespace Alura.Loja.Testes.ConsoleApp
             {
                 List<Produto> produtos = context.Produtos.ToList();
 
-                Console.WriteLine("Foram encontrados {0} Produtos", produtos.Count());
+                Console.WriteLine("Foram encontrados {0} produtos", produtos.Count());
                 foreach(Produto p in produtos)
                 {
                     Console.WriteLine(p.Nome);
