@@ -16,14 +16,22 @@ namespace Alura.Loja.Testes.ConsoleApp
         private static void GravarUsandoAdoNet()
         {
             Produto p = new Produto();
-            p.Nome = "Harry Potter e a Ordem da Fênix";
+            p.Nome = "A batalha do Apocalypse";
             p.Categoria = "Livros";
-            p.Preco = 19.89;
+            p.Preco = 34.90;
 
-            using (var repo = new ProdutoDAO())
+            //using (var repo = new ProdutoDAO())
+            //{
+            //    repo.Adicionar(p);
+            //}
+
+            using (var context = new LojaContext())
             {
-                repo.Adicionar(p);
+                context.Add(p);
+                context.SaveChanges();
+
             }
+
         }
     }
 }
