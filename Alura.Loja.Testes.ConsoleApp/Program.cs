@@ -16,7 +16,7 @@ namespace Alura.Loja.Testes.ConsoleApp
         private static void GravarUsandoAdoNet()
         {
             Produto p = new Produto();
-            p.Nome = "A batalha do Apocalypse";
+            p.Nome = "A batalha do Apocalypse.";
             p.Categoria = "Livros";
             p.Preco = 34.90;
 
