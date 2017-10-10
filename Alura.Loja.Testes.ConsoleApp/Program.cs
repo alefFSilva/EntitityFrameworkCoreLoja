@@ -16,7 +16,7 @@ namespace Alura.Loja.Testes.ConsoleApp
         private static void GravarUsandoAdoNet()
         {
             Produto p = new Produto();
-            p.Nome = "Harry Potter e a Ordem da Fênix ";
+            p.Nome = "Harry Potter e a Ordem da Fênix";
             p.Categoria = "Livros";
             p.Preco = 19.89;
 
