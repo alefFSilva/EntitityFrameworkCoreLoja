@@ -11,9 +11,30 @@ namespace Alura.Loja.Testes.ConsoleApp
         static void Main(string[] args)
         {
             // GravarUsandoAdoNet();
+            //RecuperandoProdutos();
+            // ExcluirProdutos();
+            //RecuperandoProdutos();
+
+            AtualizaProduto();
+
+            Console.ReadKey();
+        }
+
+        private static void AtualizaProduto()
+        {
+            GravarUsandoAdoNet();
             RecuperandoProdutos();
-            ExcluirProdutos();
+
+            using(var context = new LojaContext())
+            {
+                Produto p = context.Produtos.First();
+                p.Nome = p.Nome + "  Edited";
+
+                context.Produtos.Update(p);
+                context.SaveChanges();
+            }
             RecuperandoProdutos();
+
         }
 
         private static void ExcluirProdutos()
@@ -45,7 +66,7 @@ namespace Alura.Loja.Testes.ConsoleApp
 
                 }
 
-                Console.ReadKey();
+                
 
             }
 
